@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOCKCOMINS | Your Partner in Health</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+        /* Custom animation for page transitions */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600" data-page="home">
+                MOCKCOMINS
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition duration-300" data-page="home">Home</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition duration-300" data-page="providers">For Providers</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition duration-300" data-page="find-doctor">Find a Doctor</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition duration-300" data-page="contact">Contact Us</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100" data-page="home">Home</a>
+            <a href="#" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100" data-page="providers">For Providers</a>
+            <a href="#" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100" data-page="find-doctor">Find a Doctor</a>
+            <a href="#" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100" data-page="contact">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Home Page -->
+        <div id="home" class="page active fade-in">
+            <section class="bg-blue-600 text-white rounded-lg shadow-xl p-8 md:p-16 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Your Trusted Partner in Health</h1>
+                <p class="text-lg md:text-xl text-blue-100 mb-8">Comprehensive coverage and exceptional care, designed for you.</p>
+                <a href="#" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-blue-100 transition duration-300" data-page="find-doctor">Find a Doctor</a>
+            </section>
+            
+            <section class="grid md:grid-cols-3 gap-8 mt-12 text-center">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">For Our Members</h3>
+                    <p class="text-gray-600">Access your benefits, find care, and live healthier with our member resources.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">For Providers</h3>
+                    <p class="text-gray-600">Partner with us to deliver quality care. Access tools, resources, and our provider portal.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">For Employers</h3>
+                    <p class="text-gray-600">Offer your team top-tier health plans that are flexible and affordable.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- For Providers Page -->
+        <div id="providers" class="page fade-in">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Provider Resources</h2>
+            <div class="bg-white rounded-lg shadow-xl p-8 grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Partner with MOCKCOMINS</h3>
+                    <p class="text-gray-600 mb-4">Join our network of dedicated healthcare professionals. We offer competitive reimbursement, streamlined processes, and a commitment to collaborative care. Our goal is to make it easy for you to focus on what matters most: your patients.</p>
+                    <button class="bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300">Join Our Network</button>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-6">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Claims & Appeals Process</h3>
+                    <p class="text-gray-600 mb-2"><strong class="font-semibold">Appeals Submission:</strong> To file an appeal for a denied claim, please submit a formal written request along with all supporting documentation.</p>
+                    <p class="text-gray-600 mb-4">Supporting documentation should include the original claim, the remittance advice, and any relevant clinical notes or medical records that justify the services rendered.</p>
+                    <p class="text-gray-700 font-semibold">Mailing Address for Appeals:</p>
+                    <address class="not-italic bg-white p-4 rounded-md border border-gray-200 mt-2">
+                        MOCKCOMINS Insurance<br>
+                        Attn: Provider Appeals Department<br>
+                        P.O. Box 12345<br>
+                        Anytown, USA 54321
+                    </address>
+                     <p class="text-sm text-gray-500 mt-4">Please allow 30-45 business days for a response to your appeal submission. For urgent requests, please mark the envelope accordingly.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Find a Doctor Page -->
+        <div id="find-doctor" class="page fade-in">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Find an In-Network Doctor</h2>
+            <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-xl p-8">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="specialty" class="block text-sm font-medium text-gray-700">Specialty</label>
+                        <input type="text" id="specialty" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" placeholder="e.g., Cardiology">
+                    </div>
+                    <div>
+                        <label for="location" class="block text-sm font-medium text-gray-700">Location</label>
+                        <input type="text" id="location" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" placeholder="e.g., Anytown, USA">
+                    </div>
+                </div>
+                <div class="mt-6 text-center">
+                    <button class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">Search</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Us Page -->
+        <div id="contact" class="page fade-in">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Get In Touch</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-xl p-8">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Contact Information</h3>
+                    <div class="space-y-4 text-gray-600">
+                        <p><strong>Member Services:</strong> 1-800-555-0101</p>
+                        <p><strong>Provider Services:</strong> 1-800-555-0102</p>
+                        <p><strong>General Inquiries:</strong><br> MOCKCOMINS Insurance<br>100 Health Way<br>Anytown, USA 54321</p>
+                        <p><strong>Appeals Mailing Address:</strong><br> Attn: Provider Appeals Department<br>P.O. Box 12345<br>Anytown, USA 54321</p>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-lg shadow-xl p-8">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Send Us a Message</h3>
+                    <form action="#" method="POST">
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                            <input type="text" id="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm">
+                        </div>
+                         <div class="mb-4">
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2025 MOCKCOMINS Insurance. All Rights Reserved.</p>
+            <p class="text-sm text-gray-400 mt-2">This is a mock website for demonstration purposes.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav a, .text-white a');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileNavLinks = document.querySelectorAll('#mobile-menu a');
+            const pages = document.querySelectorAll('.page');
+            const initialPage = 'home';
+
+            function showPage(pageId) {
+                pages.forEach(page => {
+                    if (page.id === pageId) {
+                        page.classList.add('active', 'fade-in');
+                        // Remove animation class after it plays
+                        setTimeout(() => page.classList.remove('fade-in'), 500);
+                    } else {
+                        page.classList.remove('active');
+                    }
+                });
+            }
+
+            function handleNavClick(event) {
+                event.preventDefault();
+                const pageId = event.currentTarget.dataset.page;
+                if (pageId) {
+                    showPage(pageId);
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            }
+
+            // Desktop navigation
+            navLinks.forEach(link => link.addEventListener('click', handleNavClick));
+            
+            // Mobile navigation
+            mobileNavLinks.forEach(link => link.addEventListener('click', handleNavClick));
+
+            // Mobile menu toggle
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Show the initial page on load
+            showPage(initialPage);
+        });
+    </script>
+
+</body>
+</html>
